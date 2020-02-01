@@ -178,7 +178,9 @@ button {
     color: white;
     background: #88a2ad;
     float: left;
-    margin: 10px 0 10px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
     border-width: 1px;
     border-color: lightgrey;
 }
