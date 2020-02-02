@@ -4,13 +4,6 @@ h3 {
     font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
-#wrapper {
-    background: white;
-    max-width: 100%;
-    margin-bottom: 30px;
-    border-bottom: 2px solid lightgrey;
-}
-
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     color: #777;
@@ -24,11 +17,34 @@ body {
     overflow: auto;
 }
 
+/* nav bar header */
+
+/*the wrapper is the section that 
+spans the entire width of the page 
+and has the bottom thin grey border */
+
+#wrapper {
+    background: white;
+    max-width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 2px solid lightgrey;
+}
+
+/* the header contains the h1 name and the nav links to
+other pages and has a max width of 960px 
+My header has a height of 67px so that it will be the 
+same height as my h1 */
+
 header {
     max-width: 960px;
     margin: 0 auto;
     height: 67px;
 }
+
+/* h1 name in header, this is where the box around the name is created.
+The h1 has a height of 67px because the padding is 23px top & bottom,
+23+23=46 . The font size is 20px.  46+20=66. There is a 1px border.
+Total=67px */
 
 h1 {
     padding: 23px;
@@ -40,9 +56,14 @@ h1 {
     border-color: darkgrey;
 }
 
+/* the below is for the navigation links in the header */
+
 nav {
     float: right;
 }
+
+/* the below gets rid of the bullet points and indent that
+is the default styling on unordered lists */
 
 nav ul {
     margin: 0;
@@ -50,12 +71,17 @@ nav ul {
     list-style: none;
 }
 
+/* the below applies to every li */
+
 nav li {
     color: lightgrey;
     display: inline-block;
     margin-left: 15px;
     padding-top: 20px;
 }
+
+/* the below two styles will apply to only the li items
+that contain a link and will not affect the <li>|</li> design spacers */
 
 nav a {
     color: rgb(170, 170, 170);
@@ -66,10 +92,7 @@ nav a:hover {
     color: #88a2ad;
 }
 
-hr {
-    border: 1px solid lightgrey;
-    max-width: 880px;
-}
+/* the below applies a clearfix to occur after the header */
 
 header::after {
     content: "";
@@ -77,12 +100,26 @@ header::after {
     clear: both;
 }
 
+/* Main Section */
+
 .block {
     max-width: 960px;
     margin: 0 auto;
     background: white;
     overflow: auto;
     padding-bottom: 10px;
+}
+
+h2 {
+    color: #88a2ad;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+}
+
+hr {
+    border: 1px solid lightgrey;
+    max-width: 880px;
 }
 
 #bio-image {
@@ -93,13 +130,6 @@ header::after {
     float: left;
 }
 
-h2 {
-    color: #88a2ad;
-    padding-top: 30px;
-    padding-bottom: 5px;
-    padding-left: 40px;
-}
-
 p {
     padding: 10px 40px 40px 40px;
 }
@@ -108,6 +138,7 @@ p {
 
 .box-set {
     color: white;
+    text-align: center;
     position: relative;
     width: 960px;
     height: auto;
@@ -116,13 +147,13 @@ p {
 
 .box {
     width: 250px;
-    height: 200px;
+    padding-top: 140px;
+    padding-bottom: 40px;
     background: #88a2ad;
     border: 1px solid lightgrey;
-    margin: 20px 30px 20px 40px;
+    margin: 20px 0px 20px 40px;
     float: left;
 }
-
 
 /* Contact Form */
 
@@ -166,8 +197,12 @@ p {
     color: lightgrey;
 }
 
+input[type=text] {
+    color: rgb(170, 170, 170);
+}
+
 textarea {
-    color: darkgrey;
+    color: rgb(170, 170, 170);
     height: 150px;
 }
 
