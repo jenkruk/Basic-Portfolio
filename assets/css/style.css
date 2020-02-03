@@ -47,7 +47,7 @@ The h1 has a height of 67px because the padding is 23px top & bottom,
 23+23=46 . The font size is 20px.  46+20=66. There is a 1px border.
 Total=67px */
 
-h1 {
+.nametag h1 {
     padding: 23px;
     color: white;
     background: #88a2ad;
@@ -107,14 +107,12 @@ header::after {
 
 .block {
     max-width: 960px;
-    margin: 0px auto 30px auto;
+    margin: 0 auto;
     background: white;
     overflow: auto;
-    padding-bottom: 10px;
-
 }
 
-h2 {
+h1 {
     color: #88a2ad;
     padding-top: 30px;
     padding-bottom: 5px;
@@ -275,7 +273,6 @@ button:hover {
 footer {
     margin-top: auto;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     border-top: 8px solid #88a2ad;
@@ -292,9 +289,8 @@ This made it so the footer did not overflow on top of the portfolio page content
 For the About and Contact pages - the position needed to be fixed in order to stick the footer to the bottom. */
 
 .portfoliofooter {
-    margin-top: auto;
+    margin-top: 55px;
     position: static;
-    left: 0;
     bottom: 0;
     width: 100%;
     border-top: 8px solid #88a2ad;
