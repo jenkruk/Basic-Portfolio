@@ -1,7 +1,7 @@
 h1,
 h2,
 h3 {
-    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: auto;
+    position: relative;
 }
 
 /* nav bar header */
@@ -27,6 +28,7 @@ and has the bottom thin grey border */
     max-width: 100%;
     margin-bottom: 30px;
     border-bottom: 2px solid lightgrey;
+    top: 0px;
 }
 
 /* the header contains the h1 name and the nav links to
@@ -85,10 +87,12 @@ that contain a link and will not affect the <li>|</li> design spacers */
 nav a {
     color: rgb(170, 170, 170);
     text-decoration: none;
+    padding: 5px;
 }
 
 nav a:hover {
-    color: #88a2ad;
+    color: #657780;
+    border: 1px solid #88a2ad;
 }
 
 /* the below applies a clearfix to occur after the header */
@@ -103,10 +107,11 @@ header::after {
 
 .block {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0px auto 30px auto;
     background: white;
     overflow: auto;
     padding-bottom: 10px;
+
 }
 
 h2 {
@@ -129,8 +134,26 @@ hr {
     float: left;
 }
 
+/* this section adds the bio-image spin on hover */
+
+#bio-image {
+    border-radius: 5%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    display: inline;
+}
+
+#bio-image:hover {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+/* end bio-image affect */
+
 p {
-    padding: 10px 40px 40px 40px;
+    padding: 10px 40px 20px 40px;
 }
 
 /* for portfolio gallery */
@@ -159,7 +182,12 @@ img {
 .text-wrapper {
     width: 250px;
     position: relative;
-    margin-top: -33%;
+    margin: -33% 0 auto 0;
+}
+
+.text-wrapper :hover {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .text-wrapper h3 {
@@ -170,7 +198,6 @@ img {
     font-family: 'Times New Roman', Times, serif;
     padding: 14px;
 }
-
 
 /* Contact Form */
 
@@ -235,17 +262,43 @@ button {
     font-size: 14px;
     border-width: 1px;
     border-color: lightgrey;
+    z-index: 20;
+}
+
+button:hover {
+    background-color: #657780;
 }
 
 /* footer */
 
+
 footer {
+    margin-top: auto;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     border-top: 8px solid #88a2ad;
-    background-color: darkgrey;
+    background-color: #657780;
+    color: white;
+    text-align: center;
+    font-size: 9px;
+    padding-top: 30px;
+    padding-bottom: 2px;
+}
+
+/* I have the portfolio page it's own footer code so that I could set the position to static.  
+This made it so the footer did not overflow on top of the portfolio page content - but was pushed to the bottom.
+For the About and Contact pages - the position needed to be fixed in order to stick the footer to the bottom. */
+
+.portfoliofooter {
+    margin-top: auto;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 8px solid #88a2ad;
+    background-color: #657780;
     color: white;
     text-align: center;
     font-size: 9px;
