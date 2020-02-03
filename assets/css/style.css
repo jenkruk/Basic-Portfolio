@@ -135,20 +135,13 @@ p {
 
 /* for portfolio gallery */
 
-
 .box-set {
-    color: white;
-    text-align: center;
-    position: relative;
     width: 680px;
-    height: auto;
-    padding-top: 5px;
 }
 
 .box {
     width: 250px;
     height: 180px;
-    background: #88a2ad;
     margin: 20px 0px 20px 40px;
     float: left;
 }
@@ -158,6 +151,26 @@ img {
     height: 180px;
     margin: 0px;
 }
+
+.content-wrapper {
+    width: 250px;
+}
+
+.text-wrapper {
+    width: 250px;
+    position: relative;
+    margin-top: -33%;
+}
+
+.text-wrapper h3 {
+    text-align: center;
+    color: white;
+    background-color: #88a2ad;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 14px;
+}
+
 
 /* Contact Form */
 
@@ -235,7 +248,7 @@ footer {
     background-color: darkgrey;
     color: white;
     text-align: center;
-    font-size: 8px;
+    font-size: 9px;
     padding-top: 30px;
     padding-bottom: 2px;
 }
